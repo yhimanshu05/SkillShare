@@ -1,0 +1,10 @@
+<h2>All Courses</h2>
+<a href="/courses/new">+ Create New Course</a>
+<ul>
+  {{#each courses}}
+    <li>
+      <a href="/courses/{{this._id}}"><strong>{{this.title}}</strong></a>
+      - Category: {{this.category}}
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,15 @@
+<h2>Admin Dashboard</h2>
+
+{{#each courses}}
+  <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+    <h3>{{this.title}}</h3>
+    <p>{{this.description}}</p>
+    <p><strong>Category:</strong> {{this.category}}</p>
+    <form action="/admin/approve/{{this._id}}" method="POST" style="display:inline;">
+      <button>Approve</button>
+    </form>
+    <form action="/admin/delete/{{this._id}}" method="POST" style="display:inline;">
+      <button style="background:red; color:white;">Delete</button>
+    </form>
+  </div>
+{{/each}}
