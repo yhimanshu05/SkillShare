@@ -46,3 +46,5 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/", require("./routes/authRoutes"));
+app.use("/", require("./routes/courseRoutes"));
+app.use("/", require("./routes/adminRoutes"));
