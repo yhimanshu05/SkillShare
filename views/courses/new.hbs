@@ -1,7 +1,17 @@
 <h2>Create New Course</h2>
-<form action="/courses" method="POST">
-  <input type="text" name="title" placeholder="Title" required /><br />
-  <input type="text" name="category" placeholder="Category" /><br />
-  <textarea name="description" placeholder="Description"></textarea><br />
-  <button type="submit">Create</button>
+
+<form action="/courses/create" method="POST" enctype="multipart/form-data">
+  <input type="text" name="title" placeholder="Course Title" required><br>
+
+  <input type="text" name="category" placeholder="Category" required><br>
+
+  <label>Upload Thumbnail Image:</label>
+  <input type="file" name="image" accept="image/*" required><br>
+
+  <label>Upload Course Video:</label>
+  <input type="file" name="video" accept="video/*" required><br>
+
+  <textarea name="description" placeholder="Course Description" required></textarea><br>
+
+  <button type="submit">Create Course</button>
 </form>

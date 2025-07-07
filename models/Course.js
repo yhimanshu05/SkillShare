@@ -12,14 +12,28 @@ const courseSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  
   createdAt: {
     type: Date,
     default: Date.now,
   },
+
   isApproved: {
     type: Boolean,
     default: false,
   },
+
+  image: {
+  type: String,
+  required: true,
+  },
+
+  videoUrl: {
+  type: String,
+  required: true,
+},
 });
 
+
 module.exports = mongoose.model("Course", courseSchema);
+

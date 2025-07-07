@@ -1,4 +1,11 @@
 <h2>{{course.title}}</h2>
 <p><strong>Category:</strong> {{course.category}}</p>
+{{!-- to show the image of the course --}}
+<img src="{{course.image}}" alt="Course Image" width="300" />
 <p>{{course.description}}</p>
 <a href="/courses">Back</a>
+
+<video width="640" height="360" controls>
+  <source src="{{course.videoUrl}}" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
